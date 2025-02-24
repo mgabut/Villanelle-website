@@ -30,6 +30,7 @@
     "@angular/compiler-cli": "^19.1.0",
     "@types/jasmine": "~5.1.0",
     "angular-eslint": "19.1.0",
+    "esbuild": "^0.25.0",
     "eslint": "^9.20.0",
     "jasmine-core": "~5.5.0",
     "karma": "~6.4.0",
@@ -38,6 +39,7 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.7.2",
-    "typescript-eslint": "8.23.0"
+    "typescript-eslint": "8.23.0",
+    "vite": "^6.1.1"
   }
 }
