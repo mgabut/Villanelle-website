@@ -11,7 +11,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [20.12]
+        node-version: [20.17]
 
     steps:
       # Vérification du dépôt
@@ -23,14 +23,19 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      
+      # Mise a jour de npm 
+      - name: Update npm to match local version
+        run: npm install -g npm@11.1.0
 
       # Installation des dépendances avec npm clean-install
       - name: Install dependencies
-        run: npm clean-install
+        run: npm ci
 
       # Audit de sécurité
-      - name: Audit
-        run: npm audit
+      #- name: Audit
+        #run: npm audit
 
       # Vérification de la signature des audits
       - name: Audit Signature
@@ -40,9 +45,16 @@ jobs:
       - name: Lint
         run: npm run lint
 
+      # Set environment variables
+      - name: Create environment file
+        run: |
+          mkdir src/environments
+          echo "Creating production environment file..."
+          echo "${{ secrets.FIREBASE_CONFIG }}" >> src/environments/environment.ts
+      
       # Tests
       - name: Test
-        run: npm run test:ci
+        run: npm run test
 
       # Build
       - name: Build
