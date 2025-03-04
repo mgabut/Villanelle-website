@@ -1,0 +1,23 @@
+//@use '../../variables';
+
+.navbar-custom {
+    background-color: #f4edde;
+    padding: 10px 30px;
+}
+.navbar-brand img {
+    height: 100px; /* Taille du logo */
+}
+.navbar-nav .nav-link {
+    color: #00CACA; /* Couleur du texte */
+//    font-weight: bold;
+    margin-right: 15px;
+}
+.btn-contact {
+    background-color: #007f7f; /* Couleur du bouton */
+    color: white;
+    border-radius: 20px;
+    padding: 8px 20px;
+}
+.btn-contact:hover {
+    background-color: #005f5f;
+}
