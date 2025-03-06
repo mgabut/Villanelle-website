@@ -45,15 +45,6 @@ jobs:
       - name: Lint
         run: npm run lint
 
-      # Set environment variables
-      - name: Create environment file
-        run: |
-          mkdir -p src/environments
-          echo "export const environment = {
-            production: true,
-            firebase: ${{ secrets.FIREBASE_CONFIG }}
-          };" > src/environments/environment.ts
-          
       # Tests
       - name: Test
         run: npm run test
