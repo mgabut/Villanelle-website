@@ -1,0 +1,7 @@
+@use 'styles/variables' as *;
+
+.custom-background {
+    background-color: $background-color; /* Blanc cassé */
+    padding: 50px; /* Ajoute de l'espace autour du contenu */
+    border-radius: 10px; /* Bords arrondis */
+}
