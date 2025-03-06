@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NavbarSmartComponent } from './navbar.smart.component';
+import { ActivatedRoute } from '@angular/router';
+import { of } from 'rxjs';
 
 describe('NavbarSmartComponent', () => {
   let component: NavbarSmartComponent;
@@ -8,7 +10,13 @@ describe('NavbarSmartComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [NavbarSmartComponent]
+      imports: [NavbarSmartComponent],
+      providers: [
+        {
+        provide: ActivatedRoute,
+        useValue: { params: of({ id: '123' }) }
+        }
+      ]  
     })
     .compileComponents();
 
