@@ -1,10 +1,11 @@
 import { Component, inject, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { AuthenticationService } from './core/authentication.service';
+import { NavbarSmartComponent } from './core/navbar/navbar.smart.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, NavbarSmartComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

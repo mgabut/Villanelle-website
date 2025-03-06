@@ -1,0 +1,25 @@
+@use '../styles/variables' as *;
+
+.navbar-custom {
+    background-color: #F8F1E4 ;
+    padding: 10px 30px;
+}
+
+.navbar-brand img {
+    height: 80px; /* Taille du logo */
+}
+.navbar-nav .nav-link {
+    color: #1ABC9C ; /* Couleur du texte */
+    font-weight: 500;
+    margin-right: 15px;
+}
+.btn-contact {
+    background-color: $secondary-color; /* Couleur du bouton */
+    color: white;
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-weight: 400;
+}
+.btn-contact:hover {
+    background-color: #005f5f;
+}
