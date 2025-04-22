@@ -13,7 +13,7 @@ export class HomePageComponent {
     { 
       name: 'Feature 1',
       icon: "../icons/music-sheet.png", 
-      description: 'RÉPERTOIRE ÉLÉCTRIQUE VARIÉ' 
+      description: 'RÉPERTOIRE ÉCLECTIQUE VARIÉ' 
     },
     { 
       name: 'Feature 2',

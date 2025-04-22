@@ -3,6 +3,7 @@ import { HomePageComponent } from './visitor/home/home.page.component';
 import { LoginPageComponent } from './visitor/login/login.page.component';
 import { AboutPageComponent } from './visitor/about/about.page.component';
 import { AgendaPageComponent } from './visitor/agenda/agenda.page.component';
+import { JoiningPageComponent } from './visitor/joining/joining.page.component';
 
 export const routes: Routes = [
     {
@@ -24,5 +25,10 @@ export const routes: Routes = [
         path: 'agenda',
         component: AgendaPageComponent,
         title: 'agenda'
+    },
+    {
+        path: 'joining',
+        component: JoiningPageComponent,
+        title: 'joining'
     }
 ];
